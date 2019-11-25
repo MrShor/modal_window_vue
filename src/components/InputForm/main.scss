@@ -1,0 +1,43 @@
+.input-form {
+  margin: 0 -20px -15px;
+  padding: 30px 20px;
+  background-color: #f2f2f2;
+  &__wrap {
+    position: relative;
+    margin-bottom: 30px;
+    &__text {
+      border-radius: 2px;
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.44);
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 19px;
+      overflow: auto;
+      resize: none;
+      &.err {
+        border-color: #F54F64;
+      }
+    }
+    &__err {
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+      padding-right: 15px;
+      text-align: end;
+      font-size: 14px;
+      color: #F54F64;
+    }
+  }
+  &__button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 24px;
+    outline-color: #00000000;
+    padding: 15px 60px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #fcd539;
+    cursor: pointer;
+  }
+}

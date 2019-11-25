@@ -1,0 +1,94 @@
+.user-profile {
+  margin-bottom: 30px;
+  &__title {
+    margin-bottom: -15px;
+    padding: 10px 0 0 135px;
+    font-size: 16px;
+    @media screen and (max-width: 500px) {
+      margin-bottom: 5px;
+      padding-left: 0;
+      text-align: center;
+    }
+    &__user-name {
+      font-weight: 700;
+    }
+    &__user-position {
+      font-size: smaller;
+      color: #888888;
+    }
+  }
+  &__photo-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    &__img {
+      flex: none;
+      z-index: 1;
+      border-radius: 50%;
+      width: 122px;
+      height: 122px;
+    }
+    &__description {
+      margin-left: -35px;
+      border: 1px solid rgba(0, 0, 0, 0.19);
+      border-radius: 4px;
+      padding: 13px 15px 9px 48px;
+      font-size: 14px;
+      background-color: #fffbc7;
+    }
+  }
+  &__statistics {
+    padding-left: 135px;
+    @media screen and (max-width: 500px) {
+      padding-left: 0;
+    }
+    &__title {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #cccccc;
+      padding: 0 35px 7px 0;
+      text-align: end;
+    }
+    &__graph {
+      margin-bottom: 15px;
+      border-left: 1px solid #cccccc;
+      padding-right: 35px;
+      &__row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 25px;
+        .background-line {
+          border-radius: 0 3px 3px 0;
+          height: 25px;
+          &.green {
+            background-color: #b1e19b;
+          }
+          &.blue {
+            background-color: #ace2f8;
+          }
+          $step: 1;
+          @while $step <= 10 {
+            &.width-#{$step} {
+              width: ($step * 10%) * 0.6;
+            }
+            $step: $step + 1;
+          }
+          &__text {
+            position: absolute;
+          }
+        }
+      }
+    }
+    &__total {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #cccccc;
+      padding: 15px 35px 0 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}

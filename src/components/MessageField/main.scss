@@ -1,0 +1,49 @@
+.msg-field {
+  margin: 0 auto 21px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+  &__row{
+    display: flex;
+    margin-bottom: 12px;
+    &__username {
+      margin-right: 10px;
+      font-weight: 700;
+    }
+    &__date {
+      font-size: smaller;
+      color: #888888;
+    }
+  }
+  &__text {
+    position: relative;
+    box-shadow: 0 2px 2.5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    background-color: #f1fbff;
+    z-index: 0;
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      border: 5px solid transparent;
+      border-bottom: 5px solid #f1fbff;
+      border-left: 5px solid #f1fbff;
+      width: 0;
+      height: 0;
+      content: "";
+    }
+    &::after {
+      position: absolute;
+      top: -12px;
+      left: 19px;
+      z-index: -1;
+      border: 6px solid transparent;
+      border-bottom: 6px solid #cfcfcf;
+      border-left: 6px solid #cfcfcf;
+      width: 0;
+      height: 0;
+      content: "";
+    }
+  }
+}
